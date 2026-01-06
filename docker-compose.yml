@@ -1,0 +1,23 @@
+services:
+  techsite:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: techsite-web
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    networks:
+      - techsite-network
+    labels:
+      - "com.techsite.description=Landing page TechSite"
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  techsite-network:
+    driver: bridge

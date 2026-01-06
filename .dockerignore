@@ -1,0 +1,43 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Documentação
+README.md
+*.md
+
+# Node modules (caso adicione no futuro)
+node_modules
+npm-debug.log
+yarn-error.log
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs
+
+# Temporários
+tmp
+temp
+.tmp
+.cache
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Outros
+.env
+.env.local
