@@ -433,7 +433,7 @@ window.addEventListener('scroll', debouncedHighlight);
 // ===================================
 // CONSOLE MESSAGE
 // ===================================
-console.log('%c🚀 TechSite - Desenvolvido com ❤️', 'color: #667eea; font-size: 16px; font-weight: bold;');
+console.log('%c🚀 MinhaWeb - Desenvolvido com ❤️', 'color: #667eea; font-size: 16px; font-weight: bold;');
 console.log('%cInteressado em nossos serviços? Entre em contato!', 'color: #a0aec0; font-size: 12px;');
 
 // ===================================

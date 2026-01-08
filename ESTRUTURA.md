@@ -1,4 +1,4 @@
-# 📁 Estrutura do Projeto - TechSite
+# 📁 Estrutura do Projeto - MinhaWeb
 
 ```
 projeto-site/
@@ -84,7 +84,7 @@ projeto-site/
   - Redirecionamentos
 
 - **docker-compose.yml**: Orquestração
-  - Container: techsite-web
+  - Container: MinhaWeb-web
   - Porta: 8080:80
   - Health check configurado
   - Rede isolada

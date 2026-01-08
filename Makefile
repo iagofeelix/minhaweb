@@ -36,7 +36,7 @@ restart: ## Reinicia os containers
 clean: ## Remove containers, imagens e volumes
 	@echo "🧹 Limpando containers e imagens..."
 	docker-compose down -v
-	docker rmi techsite:latest 2>/dev/null || true
+	docker rmi MinhaWeb:latest 2>/dev/null || true
 	@echo "✅ Limpeza concluída"
 
 test: ## Testa se o site está funcionando

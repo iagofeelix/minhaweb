@@ -14,8 +14,8 @@ COPY . .
 FROM nginx:alpine
 
 # Informações do mantenedor
-LABEL maintainer="TechSite <contato@techsite.com.br>"
-LABEL description="Landing page TechSite - Serviços de criação de sites"
+LABEL maintainer="MinhaWeb <contato@MinhaWeb.com.br>"
+LABEL description="Landing page MinhaWeb - Serviços de criação de sites"
 
 # Remover configuração padrão do nginx
 RUN rm -rf /usr/share/nginx/html/*

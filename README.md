@@ -1,4 +1,4 @@
-# TechSite - Landing Page Moderna
+# MinhaWeb - Landing Page Moderna
 
 🚀 Landing page profissional e tecnológica para venda de serviços de criação de sites.
 
@@ -122,21 +122,21 @@ docker-compose down
 #### Usando Docker direto:
 ```bash
 # Construir a imagem
-docker build -t techsite:latest .
+docker build -t MinhaWeb:latest .
 
 # Executar o container
-docker run -d -p 8080:80 --name techsite-web techsite:latest
+docker run -d -p 8080:80 --name MinhaWeb-web MinhaWeb:latest
 
 # Acessar o site em: http://localhost:8080
 
 # Ver logs
-docker logs -f techsite-web
+docker logs -f MinhaWeb-web
 
 # Parar o container
-docker stop techsite-web
+docker stop MinhaWeb-web
 
 # Remover o container
-docker rm techsite-web
+docker rm MinhaWeb-web
 ```
 
 ### **Opção 3: Com servidor local (Live Server)**
@@ -206,14 +206,14 @@ O site inclui:
 ### **Docker Hub**
 ```bash
 # Tag da imagem
-docker tag techsite:latest seu-usuario/techsite:latest
+docker tag MinhaWeb:latest seu-usuario/MinhaWeb:latest
 
 # Push para Docker Hub
-docker push seu-usuario/techsite:latest
+docker push seu-usuario/MinhaWeb:latest
 
 # Pull e executar em produção
-docker pull seu-usuario/techsite:latest
-docker run -d -p 80:80 --name techsite-prod seu-usuario/techsite:latest
+docker pull seu-usuario/MinhaWeb:latest
+docker run -d -p 80:80 --name MinhaWeb-prod seu-usuario/MinhaWeb:latest
 ```
 
 ### **Deploy em Cloud (AWS, Azure, GCP, etc)**
@@ -267,9 +267,9 @@ Para adicionar HTTPS, use um reverse proxy como Nginx ou Traefik:
 version: '3.8'
 
 services:
-  techsite:
+  MinhaWeb:
     build: .
-    container_name: techsite-web
+    container_name: MinhaWeb-web
     restart: always
     networks:
       - web
@@ -368,13 +368,13 @@ O site foi otimizado para:
 docker ps
 
 # Ver logs em tempo real
-docker logs -f techsite-web
+docker logs -f MinhaWeb-web
 
 # Entrar no container
-docker exec -it techsite-web sh
+docker exec -it MinhaWeb-web sh
 
 # Ver uso de recursos
-docker stats techsite-web
+docker stats MinhaWeb-web
 
 # Limpar containers parados
 docker container prune
@@ -392,7 +392,7 @@ Este projeto é de código aberto e pode ser utilizado livremente.
 
 ## 👨‍💻 Autor
 
-Desenvolvido por **TechSite** - Transformando ideias em experiências digitais.
+Desenvolvido por **MinhaWeb** - Transformando ideias em experiências digitais.
 
 ---
 

@@ -1,11 +1,11 @@
-# 🚀 GUIA RÁPIDO - TechSite
+# 🚀 GUIA RÁPIDO - MinhaWeb
 
 ## ✅ Status do Projeto
 
 **Seu site está RODANDO com sucesso!** 🎉
 
 - 🌐 **URL Local**: http://localhost:8080
-- 🐳 **Container**: techsite-web (rodando)
+- 🐳 **Container**: MinhaWeb-web (rodando)
 - ⚡ **Status**: OK (200)
 
 ---
@@ -86,7 +86,7 @@ const phone = '5511999999999'; // Seu número aqui
 
 ### 2. **Alterar informações de contato**
 Edite `index.html` nas seções:
-- Email: Procure por `contato@techsite.com.br`
+- Email: Procure por `contato@MinhaWeb.com.br`
 - Telefone: Procure por `(11) 99999-9999`
 - Localização: Procure por `São Paulo, SP`
 
@@ -143,7 +143,7 @@ docker-compose up -d
 ### **Container não inicia?**
 ```bash
 # Ver logs
-docker logs techsite-web
+docker logs MinhaWeb-web
 
 # Remover e recriar
 docker-compose down
@@ -159,7 +159,7 @@ docker ps
 curl http://localhost:8080
 
 # Ver logs do nginx
-docker logs techsite-web -f
+docker logs MinhaWeb-web -f
 ```
 
 ---

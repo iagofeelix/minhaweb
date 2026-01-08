@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script de Deploy - TechSite
+# Script de Deploy - MinhaWeb
 # Uso: ./deploy.sh [ambiente]
 # Ambientes: local, staging, production
 
@@ -84,11 +84,11 @@ case $AMBIENTE in
         log_info "Fazendo deploy STAGING..."
         
         # Tag da imagem
-        IMAGE_TAG="techsite:staging-$TIMESTAMP"
+        IMAGE_TAG="MinhaWeb:staging-$TIMESTAMP"
         
         log_info "Criando tag: $IMAGE_TAG"
         docker-compose build
-        docker tag projeto-site-techsite:latest $IMAGE_TAG
+        docker tag projeto-site-MinhaWeb:latest $IMAGE_TAG
         
         log_warn "Push para registry não configurado"
         log_warn "Configure seu Docker registry primeiro"
@@ -110,12 +110,12 @@ case $AMBIENTE in
         log_info "Fazendo deploy PRODUCTION..."
         
         # Tag da imagem
-        IMAGE_TAG="techsite:v$TIMESTAMP"
+        IMAGE_TAG="MinhaWeb:v$TIMESTAMP"
         
         log_info "Criando tag: $IMAGE_TAG"
         docker-compose build
-        docker tag projeto-site-techsite:latest $IMAGE_TAG
-        docker tag projeto-site-techsite:latest techsite:latest
+        docker tag projeto-site-MinhaWeb:latest $IMAGE_TAG
+        docker tag projeto-site-MinhaWeb:latest MinhaWeb:latest
         
         log_warn "Push para registry não configurado"
         log_warn "Configure seu Docker registry primeiro"
@@ -123,7 +123,7 @@ case $AMBIENTE in
         # Exemplo de push (descomente e configure):
         # docker tag $IMAGE_TAG seu-registry.com/$IMAGE_TAG
         # docker push seu-registry.com/$IMAGE_TAG
-        # docker push seu-registry.com/techsite:latest
+        # docker push seu-registry.com/MinhaWeb:latest
         ;;
         
     *)

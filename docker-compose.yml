@@ -1,16 +1,16 @@
 services:
-  techsite:
+  MinhaWeb:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: techsite-web
+    container_name: MinhaWeb-web
     ports:
       - "8080:80"
     restart: unless-stopped
     networks:
-      - techsite-network
+      - MinhaWeb-network
     labels:
-      - "com.techsite.description=Landing page TechSite"
+      - "com.MinhaWeb.description=Landing page MinhaWeb"
     healthcheck:
       test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
       interval: 30s
@@ -19,5 +19,5 @@ services:
       start_period: 40s
 
 networks:
-  techsite-network:
+  MinhaWeb-network:
     driver: bridge
