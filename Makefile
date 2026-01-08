@@ -19,7 +19,7 @@ build: ## Constrói a imagem Docker
 up: ## Inicia os containers
 	@echo "🚀 Iniciando containers..."
 	docker-compose up -d
-	@echo "✅ Site disponível em http://localhost:8080"
+	@echo "✅ Site disponível em http://localhost:8081"
 
 down: ## Para os containers
 	@echo "🛑 Parando containers..."
@@ -41,7 +41,7 @@ clean: ## Remove containers, imagens e volumes
 
 test: ## Testa se o site está funcionando
 	@echo "🧪 Testando site..."
-	@curl -s -o /dev/null -w "Status: %{http_code}\n" http://localhost:8080
+	@curl -s -o /dev/null -w "Status: %{http_code}\n" http://localhost:8081
 
 dev: ## Inicia em modo desenvolvimento com logs
 	@echo "💻 Iniciando em modo desenvolvimento..."

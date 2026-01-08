@@ -1,16 +1,16 @@
 services:
-  MinhaWeb:
+  minhaweb:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: MinhaWeb-web
+    container_name: minhaweb-web
     ports:
-      - "8080:80"
+      - "8081:80"
     restart: unless-stopped
     networks:
-      - MinhaWeb-network
+      - minhaweb-network
     labels:
-      - "com.MinhaWeb.description=Landing page MinhaWeb"
+      - "com.minhaweb.description=Landing page MinhaWeb"
     healthcheck:
       test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
       interval: 30s
@@ -19,5 +19,5 @@ services:
       start_period: 40s
 
 networks:
-  MinhaWeb-network:
+  minhaweb-network:
     driver: bridge
